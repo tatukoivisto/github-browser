@@ -5,7 +5,9 @@ var ReactDOM = require('react-dom');
 class App extends React.Component {
   render() {
     return (
-      <Popular />
+    	<div className = "container">
+      		<Popular />
+    	</div>
     )
   }
 }
