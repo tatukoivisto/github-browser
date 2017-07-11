@@ -156,7 +156,6 @@ class Battle extends React.Component {
           id='playerTwo'
           label='Player Two'
           onSubmit={this.handleSubmit} />}
-            {console.log(playerTwoName)}
 
           {playerTwoImage !== null &&
           <PlayerPreview
