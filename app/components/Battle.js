@@ -99,7 +99,7 @@ class Battle extends React.Component {
       playerOneName:'',
       playerTwoName:'',
       playerOneImage: null,
-      playerOneImage: null
+      playerTwoImage: null
     }
 
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -141,7 +141,8 @@ class Battle extends React.Component {
           label='Player One'
           onSubmit={this.handleSubmit} />}
 
-          {!playerOneImage == null &&
+
+          {playerOneImage !== null &&
           <PlayerPreview
             avatar={playerOneImage}
             username={playerOneName}
@@ -155,8 +156,9 @@ class Battle extends React.Component {
           id='playerTwo'
           label='Player Two'
           onSubmit={this.handleSubmit} />}
+            {console.log(playerTwoName)}
 
-          {!playerTwoImage == null &&
+          {playerTwoImage !== null &&
           <PlayerPreview
             avatar={playerTwoImage}
             username={playerTwoName}
@@ -167,15 +169,12 @@ class Battle extends React.Component {
 
         {playerOneImage && playerTwoImage &&
           <Link className='button' to={{
-            pathname: mathc.url + '/results',
+            pathname: match.url + '/results',
             search: '?playerOneName=' + playerOneName + '&playerTwoName=' + playerTwoName
           }} >
           Battle
           </Link>
         }
-        <button >
-
-        </button>
 
       </div>
     )
